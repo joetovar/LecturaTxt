@@ -1,0 +1,314 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a proceedings volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass{svproc}
+%
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+% to typeset URLs, URIs, and DOIs
+\usepackage{url}
+\usepackage[pdftex]{graphicx}
+\def\UrlFont{\rmfamily}
+
+\begin{document}
+%\graphicspath{{Imagenes/}}
+%\mainmatter              % start of a contribution
+%
+\title{Creación de un sistema de seguridad biométrico basado en IoT para la protección de bienes en locales comerciales populares del centro histórico de Quito, Ecuador.}
+%\maketitle
+%
+%\titlerunning{Hamiltonian Mechanics}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Maverick Paucar\inst{1} \and Nayeli Tipantiza\inst{2} \and Jean Pierre Toapanta\inst{3} \and Jerry Tovar\inst{4}}
+%
+%\authorrunning{Ivar Ekeland et al.} % abbreviated author list (for running head)
+%
+%%%% list of authors for the TOC (use if author list has to be modified)
+\tocauthor{Jean Pierre Toapanta, and Jerry Tovar}
+%
+\institute{Universidad de las Fuerzas Armadas - ESPE, Sangolquì, Pichincha, Ecuador,\\
+\email{mrpaucar@espe.edu.ec - [Orcid:0000-0002-0985-1835]}
+\and
+Universidad de las Fuerzas Armadas - ESPE, Sangolquì, Pichincha, Ecuador,\\
+\email{nmtipantiza@espe.edu.ec - [Orcid:0000-0002-5652-3674]}
+\and
+Universidad de las Fuerzas Armadas - ESPE,
+Quito, Pichincha, Ecuador,\\
+\email{jptoapanta4@espe.edu.ec - [Orcid:0000-0001-8285-5587]}
+\and
+Universidad de las Fuerzas Armadas - ESPE,
+Conocoto, Pichincha, Ecuador,\\
+\email{jjtovar@espe.edu.ec - [Orcid:0000-0002-7301-5145]}
+}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+La informática y la tecnología crecen vertiginosamente permitiendo crear diversos sistemas que faciliten la monitorización de actividades en las empresas permitiendo implementar servicios de seguridad. \textbf{Problema:} Los locales comerciales en el centro histórico de Quito son un blanco fácil para la delincuencia ya que no disponen de dispositivos de seguridad para sus locales. \textbf{Objetivo:} En este caso centraremos una propuesta de seguridad para los locales pequeños del centro histórico de Quito realizando un sistema de seguridad basado en biometría e IoT para aumentar la seguridad de locales comerciales populares del centro histórico de Quito, ayudando a agilizar la reactivación económica en el sector.\textbf{Metodología:}  En la actualidad toda empresa o institución opta por tener un sistema de seguridad con hardware y software que permitan realizarlo pero en varias ocasiones este sistema es muy costoso y poco accesible para dichos locales. Se realizará una encuesta comparando precios y hablando de las facilidades y comodidad de monitorear los accesos mediante internet. \textbf{Resultados:} Disminuir el robo a los locales comerciales pupulares del centro histórico de Quito, usando el sistema proupesto.\dots
+% We would like to encourage you to list your keywords within
+% the abstract section using the \keywords{...} command.
+\keywords{Security, Thefts, Biometric, IoT.}
+\end{abstract}
+%
+\section{Introducción}
+%
+En los últimos años el incremento de robos en los locales comerciales del centro histórico de Quito van en aumento, generalmente estos  estos sufren de saqueos y robos (Jara y Bravo, 2020), ya que no cuentan con un servicio de vigilancia privada o un sistema de seguridad como algunos de los grandes centros comerciales o edificios coloniales que son usados como museos dentro del Centro Histórico. Estos pequeños negocios tampoco pueden costear un amplio sistema de seguridad, más aún cuando estamos en una recesión económica causada por la pandemia de COVID-19 (Orozco, Pacheco y Vásconez, 2021), sin embargo, desean algo funcional con lo cual poder protegerse y monitorear a su negocio.
+
+En este contexto, se hace necesario realizar un estudios sobre las principales causas y consecuencias que implican los robos a los locales comerciales populares en el centro histórico de la ciudad de Quito. En este artículo, hemos realizado un análisis y posterior revisión sistemática de literatura para identificar posibles soluciones, en este caso se realiza un sistema de seguridad basado en biometría e IoT para aumentar la seguridad de locales comerciales populares del centro histórico de Quito, y así incentivar a los dueños a volver a sus actividades comerciales regulares para generar ingresos y empleo.\\
+
+Después de revisar cada uno de los artículos podemos tener una mejor perspectiva de las propuestas de solución que se describen, con ello desarrollamos un nuevo sistema que permita disminuir los robos a locales comerciales del centro histórico de Quito en las siguientes secciones se detallan las metodologías, materiales y la topología a usarse.\\
+
+\section{Trabajos Relacionados}
+
+A continuación, se presentan las ideas de un conjunto de artículos relacionados los cuales han sido analizados, ya que estos influyen en la realización del proyecto.
+
+\subsection{Biometric car security and monitoring system using IOT.}
+Este artículo se basa en un sistema de seguridad y monitoreo biométrico de autos, basado en IoT, el cual notifica a los usuarios de la vulnerabilidad de seguridad en el vehículo, este sistema está montado sobre un microcontrolador Arduino que dispone de un módulo de sensor de huellas dactilares para la autenticación de los usuarios también dispone de un módulo de Wi-Fi para transmitir señales a una WebApp sobre el estado del vehículo en el que esté instalado. En esta investigación se pretende implementar un sistema de seguridad y monitoreo para el acceso en locales comerciales.
+La mayoría de los proyectos basados en sensores e IoT están montados sobre placas Arduino.
+
+\subsection{IoT Based Embedded System for Vehicle Security And Driver Surveillance.}
+La seguridad y vigilancia del vehículo y el conductor mediante un sistema integrado basado en IoT, se han enfocado en esto, debido a la demanda de vehículos y alza en delitos y accidentes. Entonces, se propone el diseño y desarrollo de un sistema integrado antirrobo y la autenticación biométrica por parte del conductor para que pueda acceder al vehículo, el sistema contiene una cámara que recepta la imagen de la persona que intenta ingresar al vehículo y seguidamente es comparada con la imagen del conductor que está autorizado, esta cámara capturará y enviará por correo electrónico al propietario o la persona autorizada. Entonces, dependiendo de lo que obtiene, permitirá o negará el acceso.
+Este sistema está diseñado y desarrollado con una raspberry pi, es una cámara de alta resolución, con sensor de vibración y software de código abierto.
+
+\subsection{Biometric Based Smart ATM Using RFID.}
+Modelo de cajero automático inteligente, el cual está basado en la seguridad que funcione en base a RFID y autorización de huellas dactilares para su acceso. Al colocar sensores de vibración y llama este notifica de inmediato si existe un incendio o alguna rotura. El cajero automático está basado en un microcontrolador en donde las tarjetas normales se reemplazan por tarjetas RFID, las cuales contienen el número de tarjeta del usuario. Si existe un incendio en el cajero, este sistema envía un mensaje a la estación de bomberos con las coordenadas de GPS, en otro caso, si alguien lo intenta romper, el sistema envía un mensaje a la policía junto con la ubicación.
+
+\subsection{Two-Factor Fuzzy Commitment for Unmanned IoT Devices Security.}
+Los dispositivos IoT necesitan un entorno de forma segura, para ello es necesario crear una clave criptográfica para que las funciones del algoritmo sean controladas. Este artículo busca cómo tener una clave segura para cualquier dispositivo IoT o simplemente ocultar la clave criptográfica, para esto se va a generar la clave dinámicamente a partir de los datos ruidosos usando un extractor difuso o proporcionar almacenamiento seguro mediante un compromiso difuso.
+Se usarán dos factores ruidos, desde el interior y el exterior del dispositivo IoT, si algún usuario adquiere el dispositivo, puede acceder a la fuente ruidos interna, pero no podrá extraer la clave correcta de la información.
+
+\subsection{Smart bluetooth low energy security system.}
+Debido al creciente incremento de los robos en el mundo, tanto como a bienes muebles como inmuebles, se necesita un sistema de seguridad, pero la mayoría de estos sistemas son caros y consumen demasiada energía, básicamente son diseñados para empresas grandes. Se ha buscado una solución para los locales comerciales, ya que tienen pequeños negocios y proveedores, también tiene una infraestructura pequeña en la cual no se puede alojar cableado y generadores, entonces se reemplazará la zona de administración de seguridad por un smartphone y el cableado estructurado será reemplazado por un circuito pequeño e implementación de tecnologías como Bluetooth y Wifi.\\
+
+Según los artículos revisados, se concluye que el presente proyecto propone una solución similar a las ya publicadas, sin embargo, el enfoque es distinto, ya que ninguno de los artículos leídos propone una solución para negocios pequeños ubicados en zonas vulnerables a robos o con alta afluencia de mercancía, como lo son los comercios del Centro Histórico de Quito. Por lo tanto, definimos a nuestra investigación como la implementación de un sistema ya existente en un contexto muy poco estudiado. Tal contexto son comerciantes que necesitan de un sistema de protección que no sea muy costoso, ya que no son grandes empresas, y que tenga una tecnología de vanguardia como el escáner de huella dactilar.
+
+\section{Propuesta de Solución}
+
+Se realizara un sistema de seguridad basado en biométrica e IoT para aumentar la seguridad de locales comerciales populares del centro histórico de Quito, y así incentivar a los dueños a volver a sus actividades comerciales regulares para generar ingresos y empleo.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=30em]{ima/diseñoImplementa.png}
+    \caption{Diseño General}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+\section{Componentes y Detalles de la Propuesta de Solución}
+El sistema de autenticación por medio de huella dactilar utilizará como hardware los siguientes componentes:
+
+\subsection{Módulo de Huella Dactilar}
+Es un módulo que dispone de un panel y un chip para autenticación para la fotografía de la huella dactilar. La huella dactilar está conformada por varios patrones a la hora de nacer un ser humano, dichos patrones pueden ser figuras que el chip del módulo interpreta como valores a ser evaluados.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=10em]{ima/huellaDactilar.png}
+    \caption{Módulo de Huella Dactilar}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+
+Como ejemplos, existen patrones como crestas y valles en las huellas dactilares (josem, 2015) , con la fotografía de la huella, hecha a través de un panel que escanea la huella como si de una hoja se tratase, se puede diferenciar las huellas de acuerdo a sus patrones casi inalterables. Con la automatización de los componentes se puede programar dicha comparación junto con el módulo para que realice la autenticación. La automatización está disponible en librerías que serán recursos de software para el presente proyecto.
+
+\subsection{HC-SR501}
+Es un módulo para la detección de movimiento mediante la medición de radiación. Como es bien sabido, todo emite radiación, entre más caliente esté algo, más radiación emite (García, 2017), por lo tanto, se puede detectar intrusos si alguno se acerca excesivamente a un acceso en un horario determinado, como puede ser la noche, cuando todos los accesos están cerrados.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=20em]{ima/HC-SR501.png}
+    \caption{HC-SR501}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+La información desprendida por este módulo puede ser procesada mediante un chip que envíe dicha información hacia una base de datos o directamente a un receptor que puede ser un teléfono celular mediante internet.
+
+\subsection{Placa ESP8266}
+Es una placa que dispone de un módulo WiFi incorporado para su conexión a internet mediante el protocolo TCP/IP (Llamas, 2018). Se utilizará esta placa para procesar la información llegada desde el módulo de huella dactilar y también del sensor de movimiento. La placa tiene distintos pines para su conexión física mediante cables, y un puerto USB para programarlo mediante un lenguaje de alto nivel (Java, C++).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=30em]{ima/Placa ESP8266.png}
+    \caption{Placa ESP8266}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+Al ser una placa de bajo costo es idónea para producir en poco tiempo la solución planteada en la presente investigación.
+
+\subsection{MQTT Server}
+Es un servidor basado en el protocolo MQTT (Message Queing Telemetry Transport) que es un protocolo M2M (machine-to-machine), en el cual el cliente no tiene participación más que de lector de la información llegada a una máquina participante en la conexión(Llamas, 2019) . El servidor será remoto y alquilado gratuitamente para la creación de un tópico, en el cual el publicador de la información es la placa ESP8266 y el suscriptor es el teléfono celular del cliente. Es idóneo para sistemas basados en IoT.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ima/MQTT Server.png}
+    \caption{MQTT Server}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+
+El sistema tiene todos los componentes para cumplir con su función, para la gestión de todos estos recursos físicos, el software utilizado será:
+
+\subsection{Arduino IDE}
+Es un entorno de desarrollo para realizar automatización de procesos en una placa Arduino o compatible con ella mediante lenguaje de programación Java o C++. El IDE es de código abierto y dispone de bibliotecas propias para sensores y otros componentes que generalmente implementan en las placas Arduino. La sintaxis es parecida a C++ ya que es una adaptación con varias librerías para automatizar microcontroladores como “avr-libc” (jecrespom, 2015).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6em]{ima/ArduinoIDE.png}
+    \caption{Arduino IDE}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+\subsection{Sketch}
+Es un programa para placas Arduino o similares. Se realizará un sketch para controlar todos los elementos del hardware antes mencionado. El sketch tiene dos bloques de código obligatorios para todo programa (jecrespom, 2017), el bloque setup() que es un bloque de código que se ejecuta una sola vez durante todo el funcionamiento del programa y el bloque loop() que, como su nombre lo indica, es la persistencia del programa, es decir, el bloque de código se ejecuta cíclicamente.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=17em]{ima/Sketch.png}
+    \caption{Sketch}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+\subsection{C++}
+Es un lenguaje de programación de alto nivel extendido del lenguaje C, se utilizará este lenguaje para la construcción de software dentro de la placa, además se utilizarán ciertas librerías gracias a su capacidad de generar clases, una de las características principales de este lenguaje de programación (Robledano, 2019).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=5em]{ima/C++.png}
+    \caption{C++}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+\subsection{Adafruit-Fingerprint-Sensor-Library}
+Es una librería para módulos de huella digital escrita en C++ por la entidad Adafruit Industries. Provee de funcionalidades para el control del módulo de huella digital, tales como el enrolamiento de usuarios hacia el módulo (registro), autenticación de usuarios y detección de inconsistencias. Básicamente traduce todos los procesos del módulo a variables para poder utilizarlas en nuestro sketch y, además, poder enviar esos datos hacia un tópico en el servidor MQTT.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=23em]{ima/Adafruit-Fingerprint-Sensor-Library.png}
+    \caption{Adafruit-Fingerprint-Sensor-Library}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+\subsection{Protocolo MQTT}
+Como ya se mencionó, es un protocolo de comunicación entre máquinas basado en la pila de TCP/IP. En síntesis, funciona como un servicio de mensajería push con patrón publicador/suscriptor, estos dos actores se conectan mediante un servidor central donde la información es publicada, llamado Broker; cuando un Publicador envía información Broker, se guarda en un Tópico, estructura para diferenciar los datos dentro del servidor, seguidamente, el Broker realiza una notificación al Suscriptor de dicho Tópico  para que vea la información. Se emplea el puerto 1883 y 8883 cuando funciona con seguridad TLS (Llamas, 2019).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=10em]{ima/Protocolo MQTT.png}
+    \caption{Protocolo MQTT}
+    \label{fig:ESPEICMFAST}
+\end{figure}
+
+\section{Prototipo}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=25em]{ima/diagrama.jpeg}
+    \caption{Diagrama}
+    \label{Diagrama de arquitectura}
+\end{figure}
+
+El prototipo consta de 4 elementos fundamentales, una fuente de poder de 5v para alimentación de componentes, una placa ESP8266 NodeMCU v1.0 para el procesamiento y envío de datos a internet, un sensor de movimiento PIR HC-SR501 para la detección de actividad dentro del área del sistema, y por ultimo un modulo de huella dactilar con el chip AS608 con la capacidad de almacenar hasta 128 huellas digitales, asignando un ID del 0 al 127.\\
+
+El funcionamiento consta de dos partes; la primera parte es el registro de ingresos por medio de la autenticación de huella dactilar, los participantes son el modulo de huella digital y la placa ESP8266, el modulo registra huellas mediante el script enroll.ino[?] subido a la placa ESP8266, después de ingresarlas en memoria, se sube a la placa el script fingerprint.ino[?] el cual ejecuta un loop donde pide el ingreso de la huella digital en el escaner, si detecta una coincidencia sube dicho registro a un servidor mediante el protocolo MQTT, dichos registros pueden ser visualizados en el dashboard del servidor MQTT, en este caso, se ha escogido el servidor de Adafruit ya que es gratuito y nos permite la visualización de los datos subidos en un dashboard personalizable.\\
+
+
+La segunda parte del funcionamiento es la detección de movimiento mediante un sensor PIR HC-SR501, el cual manda una señal hacia uno de los pines digitales de la placa ESP8266, así mismo, el script fingerprint.ino contiene las instrucciones tal que, al detectar un movimiento, el sensor envía una señal en alto hacia la placa, al ocurrir esto, la placa envía un dato entero hacia el servidor MQTT, registrando cualquier actividad inusual.\\
+
+Cabe destacar que en el diagrama, el voltaje es suministrado al sensor por medio de la fuente de poder de 5v y al modulo de huella digital por medio de la placa ESP8266. Las dos fuentes de voltaje deben de tener su enlace a tierra conectados para tener una referencia y funcionar correctamente. El resultado es el esperado, los registros son visualizados correctamente en el dashboard y son subidos en tiempo real.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=20em]{ima/prototipo.jpeg}
+    \caption{Prototipo a implementarse}
+    \label{fig:prototipo}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=25em]{ima/server.jpeg}
+    \caption{Dashboard del servidor MQTT io.adafruit.com}
+    \label{fig:server}
+ \end{figure}
+
+\section{Metodología}
+La metodología será la investigación mediante encuestas. Se realizará una presentación del prototipo a los comerciantes de los locales y una prueba rápida del prototipo ya desarrollado, la estructura de la encuesta estará formada de acuerdo a los siguientes criterios:\\
+
+\begin{itemize}
+  \item Precio de construcción e implementación
+  \item Satisfacción de funcionamiento
+  \item Facilidad Operativa
+  \item Posibilidades de implementar en el negocio
+\end{itemize}
+Un método sistemático para recopilar información de (una muestra de) individuos para los propósitos de describir los atributos de la población más grande de la cual los individuos son miembros. Este método se lo denomina como: La encuesta.\\
+
+En la encuesta la información se recopila al tener entrevistadores que hacen preguntas y registran
+respuestas o haciendo que la gente lea o escuche preguntas y registrar sus respuestas por medio tecnológicos o en forma presencial.\\
+
+La metodología que se propone, se basa en conocimientos experimental práctico que se adquiere mediante la investigación bibliográfica y los artículos analizados en la revisión sistemática de literatura y la experiencia que se obtuvo a lo largo del proceso. Dicha metodología pretende ser explícita la cual pueda servir de referencia en investigaciones siguientes.\\
+
+La perfilación de la demografía será para dueños de los locales comerciales populares de Quito, además tenemos en cuenta que la mayoría de los dueños son personas mayores de 30 años, por lo cual no tienen mucho conocimiento en tecnología, esto afectará a los criterios para estructurar la consulta.\\
+
+La metodología de investigación mediante encuestas nos servirá para tener una idea general de los intereses de los dueños de locales comerciales populares, ya que, como se indicó en la revisión de la literatura, no existe mucha información sobre la opinión de estos actores dentro del entorno de un centro comercial popular, específicamente en la ciudad de Quito, Ecuador.\\
+
+
+\section{Conclusiones y Trabajo Futuro}
+
+
+
+
+
+
+\section{Referencias}
+%
+% ---- Bibliography ----
+%
+\begin{thebibliography}{6}
+%
+
+\bibitem {smit:wat}
+ El Centro Histórico convive entre la inseguridad y las ventas ambulantes. (2019, julio 30). Recuperado el 27 de mayo de 2021, de Primicias.ec 
+\url{https://www.primicias.ec/noticias/sociedad/centro-historico-inseguridad-ventas-ambulantes/}
+
+\bibitem {may:ehr:stein}
+ Jara, M., y Bravo, D. (2020, abril 5). Local del Centro Histórico fue saqueado en pleno toque de queda - El Comercio. Recuperado el 27 de mayo de 2021, de Elcomercio.com 
+\url{https://www.elcomercio.com/actualidad/quito/local-centro-quito-robo-cuarentena.html}
+
+\bibitem {fost:kes}
+ Jara, M., y Bravo, D. (2020, agosto 23). Declaratoria de ‘emergencia’ piden los vecinos y dueños de locales del Centro Histórico por la inseguridad - El Comercio. Recuperado el 27 de mayo de 2021, de Elcomercio.com
+\url{https://www.elcomercio.com/actualidad/quito/declaratoria-emergencia-vecinos-centro-quito.html}
+
+\bibitem {czaj:fitz}
+ La Hora, D. (2021, diciembre 2). Comerciantes piden flexibilidad al COE en medio de la pandemia - La Hora. Recuperado el 27 de mayo de 2021, de: \url{https://lahora.com.ec/tungurahua/noticia/1102334531/comerciantes-piden-flexibilidad-al-coe-en-medio-de-la-pandemia-}
+
+\bibitem {fo:kes:nic:tue}
+ Orozco, M., Pacheco, M., y Vasconez, L. (2021, abril 30). La dura situación del trabajador, a un año de la crisis sanitaria - El Comercio. Recuperado el 27 de mayo de 2021, de Elcomercio.com \url{https://www.elcomercio.com/actualidad/trabajadores-crisis-pandemia-desempleo.html}
+
+\bibitem {onlyurl}
+ Serrano, T. (2020, diciembre 22). Coronavirus en Ecuador: Industrias comerciales en contra de nuevas medidas del COE y con propuestas propias. Recuperado el 27 de mayo de 2021, de El Universo website: \url{https://www.eluniverso.com/guayaquil/2020/12/22/nota/8627254/industrias-comerciales-propuestas-coe/}
+
+
+\bibitem {onlyurl}
+ Telégrafo, E. (2021, mayo 6). Banda de “descuideros” opera en el Centro Histórico de Quito. Recuperado el 27 de mayo de 2021, de
+\url{https://www.eltelegrafo.com.ec/noticias/actualidad/44/banda-descuideros-centro-historico-quito}
+
+\bibitem {onlyurl}
+ Garcia, I., y Casillas, J. C. (Febrero de 2015). Informática Primitiva. \url{http://informaticaprimitiva.blogspot.com/2015/02/udp-en-el-modelo-osi.html}
+
+\bibitem {onlyurl}
+ Gallardo León, C. (2009). Las Encuestas de victimización en Ecuador. \url{https://repositorio.flacsoandes.edu.ec/handle/10469/1650}
+
+\bibitem {onlyurl}
+Basantes Guala, M. A., & Erazo Proaño, M. A. (2020). Análisis de los factores que inciden en el robo a personas según la modalidad del delito, en el cantón Quito, provincia Pichincha, Ecuador correspondiente al período 2014-2018 (Bachelor's thesis, Quito: UCE). \url{http://www.dspace.uce.edu.ec/handle/25000/22298}
+
+\bibitem {onlyurl}
+Aguilera Hintelholher, Rina Marissa. (2013). Identidad y diferenciación entre Método y Metodología. Estudios políticos (México), (28), 81-103. Recuperado en 27 de julio de 2021, de \url{ http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-16162013000100005&lng=es&tlng=es.}
+
+\end{thebibliography}
+
+\end{document}
